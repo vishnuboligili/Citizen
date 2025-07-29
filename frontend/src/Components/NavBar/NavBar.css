@@ -1,0 +1,128 @@
+/* UserNavbar.css | Cyber-Themed Navbar to match .key-features */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: linear-gradient(to bottom, rgb(4, 4, 84), #010011);
+  height: 90px;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1); /* subtle glow */
+  position: relative;
+  z-index: 10;
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: navbarFadeIn 0.8s ease-in-out;
+  border-bottom: 1px solid #38bdf8;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 65px;
+  object-fit: contain;
+  transition: transform 0.4s ease-in-out, filter 0.4s ease;
+  filter: drop-shadow(0 0 6px #38bdf8);
+}
+.navbar-logo img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px #38bdf8);
+}
+
+/* Center Navigation Links */
+.navbar-icons {
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-icons a {
+  text-decoration: none;
+  color: #f1f5f9;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  letter-spacing: 0.6px;
+  text-shadow: 0 0 6px rgba(56, 189, 248, 0.3);
+}
+
+.navbar-icons a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #38bdf8;
+  transition: width 0.4s ease-in-out;
+}
+
+.navbar-icons a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+.navbar-icons a:hover::after {
+  width: 100%;
+}
+
+/* Login Button */
+.nav-login {
+  margin-right: 10px;
+}
+.nav-login a {
+  text-decoration: none;
+  color: #f1f5f9;
+  padding: 10px 20px;
+  border: 2px solid #38bdf8;
+  border-radius: 8px;
+  font-weight: 600;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+  text-shadow: 0 0 5px #38bdf8;
+}
+.nav-login a:hover {
+  background-color: #38bdf8;
+  color: #0f172a;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px #38bdf8;
+}
+
+/* Profile Icon */
+.profile-icon {
+  color: #f1f5f9;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-shadow: 0 0 4px #38bdf8;
+}
+.profile-icon:hover {
+  color: #38bdf8;
+  transform: scale(1.1);
+  text-shadow: 0 0 8px #38bdf8;
+}
+.nav-profile-image {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #38bdf8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-profile-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #38bdf8;
+}
+
+/* Fade-in Animation */
+@keyframes navbarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

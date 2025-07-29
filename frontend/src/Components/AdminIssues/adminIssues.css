@@ -1,0 +1,150 @@
+/* User Issue Container with Glow Effect */
+.admin-issues-container {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow:
+    0 0 0 8px rgba(40, 167, 69, 0.1),
+    0 0 30px rgb(56, 15, 206);
+  position: relative;
+  z-index: 1;
+}
+
+.admin-issues-container::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(40, 167, 69, 0.25), transparent 60%);
+  filter: blur(40px);
+  z-index: -1;
+  border-radius: 20px;
+}
+  
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.filter-buttons button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.issues-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.issue-card {
+  display: flex;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.issue-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.issue-details {
+  flex: 1;
+  min-width: 200px;
+}
+
+.issue-details div {
+  margin-bottom: 0.3rem;
+}
+
+.assign-btn,
+.complete-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.assign-btn:hover,
+.complete-btn:hover {
+  background-color: #218838;
+}
+
+.complete-btn {
+  background-color: #6c757d;
+}
+
+.complete-btn:hover {
+  background-color: #5a6268;
+}
+
+.dropdown {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.dropdown select {
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.no-worker {
+  color: #c00;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .issue-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .issue-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+}

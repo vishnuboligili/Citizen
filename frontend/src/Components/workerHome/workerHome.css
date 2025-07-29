@@ -1,0 +1,57 @@
+.worker-home-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.worker-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.worker-home-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.worker-home-card {
+  width: 300px;
+  background-color: #f2f2f2;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.worker-home-card h2 {
+  margin-bottom: 15px;
+  color: #005f73;
+}
+
+.worker-home-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.worker-home-card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.worker-home-card button:hover {
+  background-color: #005f73;
+}
