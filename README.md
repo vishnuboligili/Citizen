@@ -40,8 +40,3 @@ A full-stack web application that allows citizens to report civic issues (such a
 
 ---
 
-## 📦 Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/vishnuboligili/Cityzen
